@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+* {
+    font-family: Loto ,"Noto Sans JP",sans-serif;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    /*
+    padding-left: 15px;
+    padding-right: 15px;
+    */
+    padding-left: 15%;
+    padding-right: 15%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 50;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px gray;
+}
+
+.header .icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50px;
+    background-image: url("iemike.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.header .right {
+    margin-left: auto;
+}
+
+.header .right .link {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 15px;
+}
+
+.header .right .link_in {
+    padding-bottom: 2px;
+    color: #65a2f3;
+    border-bottom: 2px solid #65a2f3;
+}
+
+.header #link_tab_pc {
+    display: block;
+}
+
+.header #link_phone {
+    padding: 0;
+    margin-right: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+    align-items: center;
+}
+
+.header #link_phone .material-icons-outlined {
+    font-size: 1.6rem;
+}
+
+.menu_background {
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms 0s ease;
+}
+
+.menu_container {
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+    margin-left: -80%;
+    margin-top: 70px;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 15;   
+    transition: all 300ms 0s ease; 
+}
+
+/*
+.header .logged {
+    height: 70px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.header .logged .logged_icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-image: url("iemike.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logged_menu {
+    width: 230px;
+    margin-top: 150px;
+    margin-left: -180px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px gray;
+    position: fixed;
+}
+*/
+
+/* BTN */
+
+.btn {
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-left: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #65a2f3;
+    border: 2px solid #65a2f3;
+    transition: all 300ms 0s ease;
+}
+
+.btn:hover {
+    color: #65a2f3;
+    background-color: transparent;
+}
+
+/*
+.btn:active {
+    color: #ffffff;
+    background-color: #494949;
+    border: 2px solid #494949;
+}
+*/
+
+.btn:disabled {
+    color: #a7a7a7;
+    background-color: #777777;
+    border: 2px solid #777777;
+}
+
+/* BTN END */
+
+.main {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 85px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.main .title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 479px) { 
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header #link_tab_pc {
+        display: none;
+    }
+    .header #link_phone {
+        display: flex;
+    }
+    .main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

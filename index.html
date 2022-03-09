@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - iemike</title>
+
+    <link rel="stylesheet" href="mydesign.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons+Outlined" rel="stylesheet">
+
+    <script>
+        var menu_if = false
+
+        function menu() {
+            if (menu_if == false) {
+                document.getElementsByClassName("menu_background")[0].style.opacity = "1"
+                document.getElementsByClassName("menu_background")[0].style.visibility = "visible"
+                document.getElementsByClassName("menu_container")[0].style.marginLeft = "0"
+                menu_if = true
+            } else {
+                document.getElementsByClassName("menu_background")[0].style.opacity = "0"
+                document.getElementsByClassName("menu_background")[0].style.visibility = "hidden"
+                document.getElementsByClassName("menu_container")[0].style.marginLeft = "-80%"
+                menu_if = false
+            }
+        }
+    </script>
+
+</head>
+<div class="menu_background" onclick="menu()">
+</div>
+<div class="menu_container">
+    <h2>こんちは</h2>
+    ハンバーガーメニュー
+</div>
+
+<body>
+    <header class="header">
+        <!--<div class="icon"></div>-->
+        <button type="button" id="link_phone" onclick="menu()">
+            <span class="material-icons-outlined">
+                menu
+            </span>
+        </button>
+        <span class="title">iemike</span>
+        <div class="right">
+            <div id="link_tab_pc">
+                <a href="index.html" class="link link_in">ホーム</a>
+                <a href="index.html" class="link">リンク</a>
+                <button type="button" class="btn btn_login">ボタン</button>
+            </div>
+        </div>
+        <!--
+        <div class="logged">
+            <div class="logged_icon"></div>
+            <div class="logged_menu">
+                ログアウト
+            </div>
+        </div>
+        -->
+    </header>
+    <main class="main">
+        <div class="title">こんにちは</div>
+        なんとなく書いておいたサイトです
+    </main>
+</body>
+</html>
